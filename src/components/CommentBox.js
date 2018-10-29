@@ -4,8 +4,7 @@ class CommentBox extends Component {
   render(){
     return(
       <div>
-        This is a starting of the comment Box.
-        <textarea>Hahahah</textarea>
+        Comment Box
       </div>
     )
   }

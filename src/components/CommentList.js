@@ -4,8 +4,7 @@ class CommentList extends Component {
   render(){
     return(
       <div>
-        
-        <button>Submit</button>
+        Comment List
       </div>
     )
   }
