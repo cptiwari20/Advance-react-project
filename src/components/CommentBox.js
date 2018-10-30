@@ -6,22 +6,24 @@ class CommentBox extends Component {
   handleChange(event) {
     this.setState({comment: event.target.value });
   }
-  handleSubmit(event) {
+  handleSubmit(event){
     event.preventDefault();
 
     // call an action creator to add a comment to a list
 
-    this.setState({comment: 'Submitted'})
+    this.setState({comment: ''})
   }
   render(){
     return(
-      <form onSubmit={this.handleSubmit}>
+      <form onSubmit={this.handleSubmit.bind(this)}>
         <h2>Comment Here</h2>
         <textarea 
           value={this.state.comment}
-          onChange={this.handleChange} 
+          onChange={this.handleChange.bind(this)} 
         />
-        <button>Submit Comment</button>
+        <div>
+          <button>Submit Comment</button>
+        </div>
       </form>
     )
   }
