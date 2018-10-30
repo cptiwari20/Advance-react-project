@@ -5,6 +5,10 @@ import App from 'components/App';
 import CommentBox from 'components/CommentBox';
 import CommentList from 'components/CommentList';
 
+let wrapper;
+beforeEach(() => {
+  wrapper = shallow(<App />)
+})
 /*
 // it(); // it is a global function(we do not need to import or require it.) It describes the test file we are going to run.
 it('show a comment box', () => {
@@ -18,12 +22,9 @@ it('show a comment box', () => {
 })
 */
 it('show a comment Box', () => {
-  const wrapper = shallow(<App />); // gets the 
-
   expect(wrapper.find(CommentBox).length).toEqual(1);
 });
-it('show a comment List', () => {
-  const wrapper = shallow(<App />); // gets the 
 
+it('show a comment List', () => {
   expect(wrapper.find(CommentList).length).toEqual(1);
 })
