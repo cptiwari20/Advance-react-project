@@ -19,7 +19,8 @@ class CommentBox extends Component {
         <h2>Comment Here</h2>
         <textarea 
           value={this.state.comment}
-          onChange={this.handleChange.bind(this)} 
+          onChange={this.handleChange.bind(this)}
+          autoFocus 
         />
         <div>
           <button>Submit Comment</button>
