@@ -1,4 +1,5 @@
-import { SAVE_COMMENT } from 'actions/types';
+import axios from 'axios';
+import { SAVE_COMMENT, FETCH_COMMENT } from 'actions/types';
 
 export function saveComment (comment) {
   return {
@@ -6,3 +7,11 @@ export function saveComment (comment) {
     payload: comment 
   }
 };
+
+export function fetchComments() {
+  const response = axios.get('http://jsonplaceholder.typicode.com/comments');
+  return {
+    type: FETCH_COMMENT,
+    payload: response
+  }
+}
